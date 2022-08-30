@@ -105,8 +105,8 @@ a{
     font-family: "MM";
 }
 .describe-item-text{
-    width: 538px;
-height: 135px;
+    max-width: 538px;
+    width: 100%;
 padding-top: 33px;
 justify-content: center;
 }
@@ -121,9 +121,9 @@ font-size: 20px;
 line-height: 24px;
 color: #FFFFFF;
 font-family: "MM";
-   width: 333px;
+   max-width: 333px;
+   width: 100%;
     text-align: right;
-height: 120px;
 }
 
 .main__item-text-active2{
@@ -131,8 +131,8 @@ height: 120px;
 line-height: 24px;
 color: #FFFFFF;
 font-family:"MM" ;
-width: 333px;
-height: 144px;
+max-width: 333px;
+width: 100%;
 }
 
 .main__describe-active{
@@ -237,4 +237,71 @@ box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.25);
 line-height: 24px;
 text-align: right;
 color: #FFFFFF;
+}
+@media(max-width:1350px){
+    .nav-contain{
+        justify-content: center;
+    }
+    .header__nav-logo{
+        flex-direction: column;
+    }
+    .header__nav-shop{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+}
+@media(max-width:1100px){
+    .main__describe-item,
+    .main__describe-active{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 10px 0;
+    }
+    .main__item-img-active::after,
+    .main__item-img-active::before{
+        display: none;
+    }
+    .main__shop{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+@media(max-width:750px){
+    .footer__contain{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer{
+        padding: 10px;
+    }
+    .header__advertise-title{
+        font-size: 30px;
+    }
+    .header__search{
+        width: 35%;
+    }
+    .header__text{
+        font-size: 15px;
+        text-align: center;
+    } 
+    .main__describe-item img,
+    .main__describe-active img{
+        width: 100%;
+    }
+    .main__item-text,
+    .main__item-text-active1,
+    .main__item-text-active2{
+        font-size: 20px;
+    }
+    .main__describe{
+        padding: 0 5px;
+    }
+}
+@media(max-width:450px){
+ .main__describe-item p{
+    
+ }   
 }
